@@ -5,11 +5,11 @@ var http = require('http');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '../dist'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/index.html'));
+res.sendFile(path.join(__dirname+'../dist/index.html'));
 });
 
 //app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, '../dist/index2.html')) ) ;
